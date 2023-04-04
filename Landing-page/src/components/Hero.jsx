@@ -1,5 +1,5 @@
 import React from "react";
-import { RiCheckboxBlankCircleFill, RiPlayFill, RiStarFill } from "react-icons/ri";
+import { RiCheckboxBlankCircleFill, RiPlayFill, RiStarFill,RiCheckboxBlankFill } from "react-icons/ri";
 
 
 const Hero = () => {
@@ -35,8 +35,7 @@ const Hero = () => {
             <div className="md:col-span-3 flex items-center justify-center relative">
                 <div>
                 <img src="hero.png" className="w-[450px] h-[450px] object-cover -mt-28" />
-                 <div className="bg-white relative p-4 flex flex-col gap-2 justify-center max-w-[250px] mx-auto">
-                    <div className="rounded-lg shadow-xl">
+                 <div className="bg-white relative shadow-xl rounded-lg p-4 flex flex-col gap-2 justify-center max-w-[250px] mx-auto -mt-12">
                     <div className="flex items-center">
                     <img src="https://img.freepik.com/foto-gratis/empresaria-confiada-sonriente-que-presenta-brazos-cruzados_1262-20950.jpg" 
                     className="h-10 w-10 object-contain rounded-full ring-2 ring-gray-300 bg-white"
@@ -55,14 +54,20 @@ const Hero = () => {
                     <div className="flex items-center gap-2 text-lg text-gray-500">
                         <RiStarFill className="text-primary" />5.0 (3.1K Reviews)
                     </div>
-                    <RiCheckboxBlankCircleFill className="absolute text-primary text-8xl -right-11 -bottom-10 -z-10"/>
+                    <div className="absolute -right-11 -bottom-10 -z-10">
+                        <div className="relative">
+                        <RiCheckboxBlankCircleFill className="text-primary text-8xl"/>
+                        <RiCheckboxBlankFill className="absolute -left-7 -top-6 text-white text-8xl" />
+                        </div>
                     </div>
                  </div>
                 </div>
-
+                {/*Circle*/}
                 <div className="absolute top-1/2 -translate-y-1/2 left-1/2 
                 -translate-x-1/2 w-[380px] h-[380px] bg-white border-[10px] border-primary rounded-full -z-10">
                 </div>
+                {/*Logos*/}
+                <img src="figma.png"/>
             </div>
         </section>
     )
